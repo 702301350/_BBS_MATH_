@@ -250,7 +250,7 @@ $$
 
 设 $\alpha$ 和 $\beta$ 是 $x \to x_0$ 时的无穷小
 
-![2023-02-13 21-28-58屏幕截图](https://s2.loli.net/2023/02/13/c71OkNmCQ9IYVsH.png)
+![2023-02-26 19-37-32屏幕截图](https://s2.loli.net/2023/02/26/TnPuMrOZFEzYRpD.png)
 
 ## 1.6 函数的连续性和连续函数的运算
 
