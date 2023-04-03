@@ -587,7 +587,7 @@ $$
 ## 5.2 可分离变量微分方程
 
 ### 一. 定义：
-​	可分离变量的微分方程是指可化为形式的微分方程，
+​	可分离变量的微分方程是指可化为形式的微分方程,
 $$
 g(y)dy = f(x)dx
 $$
@@ -599,7 +599,187 @@ $$
 
 ## 5.3 齐次方程
 
-## 5.4 非线性微分方程
+### 一. 定义：
+
+​	如果一阶微分方程可以化为：
+$$
+{dy \over dx} = \phi({y \over x})
+$$
+​	$\phi$ 是关于 ${y \over x}$ 的方程, 则称该类方程为 `齐次方程`.
+
+​	计算时，一般有以下关系：
+$$
+令 u = {y \over x}\\
+\begin{cases}
+{dy \over dx} = u + x{du \over dx}\\
+\\
+{dy \over dx} = \phi(u)
+\end{cases}
+$$
+​    联立方程组，再通过可分离变量微分方程解得答案
+
+
+
+### 二. 习题：
+
+
+
+## 5.4 一阶线性微分方程
+
+### 一. 定义：
+
+​	方程
+$$
+{dy \over dx} + P(x)y = Q(x) 
+$$
+​	当
+
+## 5.5 二阶常数非齐次微分方程
+
+![2023-03-13 18-00-37屏幕截图](https://s2.loli.net/2023/03/13/QT8AUcD1HIpFr5e.png)
+
+
+
+## 6.1 向量和其线性运算
+
+### 一. 空间直角坐标系
+
+#### 坐标系
+
+![coord](https://s2.loli.net/2023/03/30/xOMQArpj21nfTvz.png)
+
+#### 坐标面
+
+![coord2](https://s2.loli.net/2023/03/30/oNLETm5a2Hnc3wt.png)
+
+## 6.2 向量的乘法运算
+
+### 一. 数量积
+
+#### 基本公式：
+
+$$
+
+$$
+
+#### 坐标乘积：
+
+$$
+\vec{a} \cdot \vec{b} = (a_x, a_y, a_z) \cdot (b_x, b_y, b_z) = a_x \cdot b_x + a_y \cdot b_y + a_z \cdot b_z
+$$
+
+#### 交换律，结合律，分配律：
+
+$$
+\vec{a} \cdot \vec{0} = 0\\
+\vec{a} \cdot \vec{b} = \vec{b} \cdot \vec{a} \\
+\vec{a} \cdot (\vec{b} + \vec{c}) = \vec{a} \cdot \vec{b} + \vec{a} \cdot \vec{b} \\
+(\lambda\vec{a})\cdot (\mu\vec{b}) = (\lambda \cdot \mu)(\vec{a} \cdot \vec{b})
+$$
+
+### 二. 向量积
+
+#### 基本公式：
+
+$$
+\vec{a} \times \vec{b} = (a_yb_z - a_zb_y)\vec{i} + (a_zb_x - a_xb_z)\vec{j} + (a_xb_y - a_yb_x)\vec{k}
+$$
+
+#### 向量积几何意义：
+
+![dian](https://s2.loli.net/2023/04/03/TZBaxzfh26MSNEi.png)
+
+通过图像发现 $\vec{a}$ 和 $\vec{b}$ 的向量积也是一个矢量，所以注意 $\vec{a} \times \vec{b} =  - (\vec{b} \times \vec{a})$ 
+
+#### 运算方式（行列式）：
+
+$$
+\vec{a} \times \vec{b} = \begin{vmatrix}
+i & j & k 
+\\
+a_x & a_y & a_z 
+\\
+b_x & b_y & b_z
+\end{vmatrix}
+= 
+\begin{vmatrix}
+a_y & a_z
+\\
+b_y & b_z
+\end{vmatrix}\vec{i}
+-
+\begin{vmatrix}
+a_x & a_z
+\\
+b_x & b_z
+\end{vmatrix}\vec{j}
++
+\begin{vmatrix}
+a_x & a_y
+\\
+b_x & b_y
+\end{vmatrix}\vec{z}
+$$
+
+#### 向量积模长公式：
+
+$$
+|\vec{a} \times \vec{b}| = |\vec{a}||\vec{b}|\sin{\theta}
+$$
+
+#### 向量积模长几何意义：
+
+![向量积模长](https://s2.loli.net/2023/04/03/7CEifqWre2YRQUp.png)
+
+通过图片发现由 $\vec{a}$ 和 $\vec{b}$ 围成的平行四边形的面积就是向量积的模长 $S = |\vec{a}| \cdot h = |\vec{a}||\vec{b}|\sin{\theta}$
+
+### 三. 混合积：
+
+#### 基本公式:
+
+$$
+[\vec{a} \quad \vec{b} \quad \vec{c}] = (\vec{a} \times \vec{b}) \cdot \vec{c}
+$$
+
+#### 运算方式(行列式):
+
+$$
+[\vec{a} \quad \vec{b} \quad \vec{c}] = \begin{vmatrix}
+a_y & a_z \\
+b_y & b_z
+\end{vmatrix}c_x
+-
+\begin{vmatrix}
+a_x & a_z \\
+b_x & b_z 
+\end{vmatrix}c_y
++
+\begin{vmatrix}
+a_x & a_y \\
+b_x & b_y
+\end{vmatrix}c_z
+$$
+
+也可写成,三阶行列式:
+$$
+[\vec{a} \quad \vec{b} \quad \vec{c}] = \begin{vmatrix}
+a_x & a_y & a_z \\
+b_x & b_y & b_z \\
+c_x & c_y & c_z \\
+\end{vmatrix}
+$$
+
+#### 指换规律:
+
+$$
+[\vec{a} \quad \vec{b} \quad \vec{c}] = [\vec{b} \quad \vec{c} \quad \vec{a}] = [\vec{c} \quad \vec{a} \quad \vec{b}]
+$$
+
+
+
+## 6.3 平面与直线
+
+## 6.4 平面，直线间的位置关系
 
 
 
@@ -1000,3 +1180,32 @@ $$
 ![pc3ba4sb](https://s2.loli.net/2023/01/14/pMButz85TOkvJi3.gif)
 
 无理数的数量比有理数多，但有理数分布相对稠密，所以函数图像视觉上看上去像是 $y = 1$ 和 $y = 0$ 函数的合体，但是狄利克雷函数有理数点不连续，无理数点连续
+
+
+
+### 空间向量积基本公式证明
+
+设空间内任意非零向量 $\vec{a}$ 和 $\vec{b}$ 
+$$
+\vec{a} \times \vec{b} = a_xb_x(\vec{i} \times \vec{i}) + a_xb_y(\vec{i} \times \vec{j}) +    a_xb_z(\vec{i} \times \vec{k}) + \\
+a_yb_x(\vec{j} \times \vec{i}) + a_yb_y(\vec{j} \times \vec{j}) + a_yb_z(\vec{j} \times \vec{k}) + \\
+a_zb_x(\vec{k} \times \vec{i}) + a_zb_y(\vec{k} \times \vec{j}) + a_zb_z(\vec{k} \times \vec{k})
+$$
+$$
+\vec{a} \times \vec{b} = (a_yb_z - a_zb_y)\vec{i} + (a_zb_x - a_xb_z)\vec{j} + (a_xb_y - a_yb_x)\vec{k}
+$$
+对于单位向量 $\vec{i}$， $\vec{j}$， $\vec{k}$ 之间有：
+$$
+\vec{i} \times \vec{i} = 0,  \vec{j} \times \vec{j} = 0, \vec{k} \times \vec{k} = 0
+\\
+\\
+\vec{i} \times \vec{j} = \vec{k}, \vec{i} \times \vec{k} = \vec{j}, \vec{j} \times \vec{k} = \vec{i}
+\\
+\\
+\vec{j} \times \vec{i} = -\vec{k}, \vec{k} \times \vec{i} = -\vec{j}, \vec{k} \times \vec{j} = -\vec{i}
+$$
+得公式
+$$
+\vec{a} \times \vec{b} = (a_yb_z - a_zb_y)\vec{i} + (a_zb_x - a_xb_z)\vec{j} + (a_xb_y - a_yb_x)\vec{k}
+$$
+
