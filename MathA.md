@@ -642,7 +642,7 @@ $$
 
 ## 6.1 向量和其线性运算
 
-### 一. 空间直角坐标系
+### 一. 空间直角坐标系:
 
 #### 坐标系
 
@@ -654,7 +654,7 @@ $$
 
 ## 6.2 向量的乘法运算
 
-### 一. 数量积
+### 一. 数量积:
 
 #### 基本公式：
 
@@ -677,7 +677,7 @@ $$
 (\lambda\vec{a})\cdot (\mu\vec{b}) = (\lambda \cdot \mu)(\vec{a} \cdot \vec{b})
 $$
 
-### 二. 向量积
+### 二. 向量积:
 
 #### 基本公式：
 
@@ -733,7 +733,7 @@ $$
 
 通过图片发现由 $\vec{a}$ 和 $\vec{b}$ 围成的平行四边形的面积就是向量积的模长 $S = |\vec{a}| \cdot h = |\vec{a}||\vec{b}|\sin{\theta}$
 
-### 三. 混合积：
+### 三. 混合积:
 
 #### 基本公式:
 
@@ -779,11 +779,148 @@ $$
 
 ## 6.3 平面与直线
 
+### 一. 平面方程:
+
+![2023-05-30 19-12-51屏幕截图](https://s2.loli.net/2023/05/30/b7CdqHYohREMmty.png)
+
+![2023-05-30 19-16-05屏幕截图](https://s2.loli.net/2023/05/30/dBHOberfPhG1FD5.png)
+
 
 
 ## 6.4 平面，直线间的位置关系
 
+### 一. 空间方程：
 
+​	由于空间的平面组合可以通过由无数个直线L(各个平面相交而成)组成，所以空间方程是关于直线L的方程组.
+
+![Pingmianfunction](https://s2.loli.net/2023/05/30/Vtw2TYmSMa5Rnec.png)
+
+
+
+## 6.5 曲面及其方程
+
+### 一.旋转曲面：
+
+#### 定义：
+
+​	以一条曲线绕其平面上旋转一周形成的曲面叫做`旋转曲面`， 旋转曲线叫做`母线`，定直线叫做`轴`.
+
+#### 曲线方程：
+
+​	设在 $aOb$ 平面上的曲线 $C$ 的方程为：
+$$
+f(a, b) = 0
+$$
+​    这个曲线 $C$ 绕 $b$ 轴转，对应轴的坐标不变，即点坐标中的 $b$ 不变. 需要求该点到 $b$ 轴的距离，即 $\sqrt{a^2 + c^2}$, 旋转曲面方程为：
+$$
+f(\pm\sqrt{a^2 + c^2},b) = 0
+$$
+​    同理，如果曲线 $C$ 绕 $a$ 轴转，则旋转曲面方程为：
+$$
+f(a, \pm\sqrt{b^2 + c^2}) = 0
+$$
+
+
+### 二. 常用二次曲面方程：
+
+#### 1.单叶双曲面：
+
+$$
+{{x^2} \over {a^2}} + {{y^2} \over {b^2}} - {{z^2} \over {c^2}} = 1
+$$
+
+图像：
+
+![danye_shuangqu](https://s2.loli.net/2023/05/30/s74KH95kDPGyUAi.png)
+
+#### 2.双叶双曲面
+
+公式：
+$$
+{{x^2} \over {a^2}} - {{y^2} \over {b^2}} - {{z^2} \over {c^2}} = 1
+$$
+图像：
+
+![shuangye_shuangqu_](https://s2.loli.net/2023/05/31/jEePawNm1hKvXkt.png)
+
+
+
+#### 3.圆柱面：
+
+公式：
+$$
+{{x^2} + {y^2} = {R^2}}
+$$
+图像：
+
+![yuan_zhu](https://s2.loli.net/2023/05/31/htpCQYFgWiDK3Lz.png)
+
+#### 4.椭圆柱面：
+
+公式：
+$$
+{{x^2} \over {a^2}} + {{y^2} \over {b^2}} = 1
+$$
+图像：
+
+![tuoyuan_zhu](https://s2.loli.net/2023/05/31/tKagSlUQ4B7zYwq.png)
+
+
+
+#### 5.抛物柱面：
+
+公式：
+$$
+{y^2} = 2px
+$$
+图像：
+
+![paowuxian_zhu](https://s2.loli.net/2023/05/31/s41jyACdWFnacYP.png)
+
+
+
+#### 6. 球面：
+
+公式：
+$$
+{(x - x_0)^2} + (y - y_0)^2 + (z - z_0)^2 = {R^2}
+$$
+图像：
+
+![qiu_mian](https://s2.loli.net/2023/05/31/fBE7ZDRbTX63MlF.png)
+
+#### 7.椭球面
+
+公式：
+$$
+{{x^2} \over {a^2}} + {{y^2} \over {b^2}} + {{z^2} \over {c^2}} = 1
+$$
+图像：
+
+![tuoqiu_mian](https://s2.loli.net/2023/05/31/monXhe7IK5RufMD.png)
+
+
+
+#### 8. 椭圆锥面：
+
+公式：
+$$
+{{x^2} \over {a^2}} + {{y^2} \over {b^2}} = {z^2}
+$$
+图像：
+![yuanzhui_mian](https://s2.loli.net/2023/05/31/9MWLpKCbcuzhyPX.png)
+
+
+
+#### 9.椭圆抛物面：
+
+公式：
+$$
+{{x^2} \over {a^2}} + {{y^2} \over {b^2}} = z
+$$
+图像：
+
+![tuoyuan_paowu_mian](https://s2.loli.net/2023/05/31/NY9Ci1MK7QFZHLa.png)
 
 ## 例题答案
 
