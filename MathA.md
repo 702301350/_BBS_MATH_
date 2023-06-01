@@ -922,6 +922,85 @@ $$
 
 ![tuoyuan_paowu_mian](https://s2.loli.net/2023/05/31/NY9Ci1MK7QFZHLa.png)
 
+## 7.1 二重积分
+
+### 一.定义：
+
+​	设 $f(x, y)$ 是有界封闭区域 $D$ 上的有界函数，将闭区间 $D$ 任意分成 $n$ 个小闭合区域（面积）
+$$
+\Delta{\sigma_{1}},\Delta{\sigma_{2}}, ... \Delta{\sigma_{n}}
+$$
+​	在 $\Delta{\sigma_{i}}$ 上任意取一点 $(\xi_{i}, \eta_{i})$，做乘积 $f({\xi_{i}, {\eta_{i}}}) \cdot \Delta{\sigma_{i}}$，看成第 $i$ 块的`体积（曲顶柱体）`或者`质量（薄片）`的近似值，所以整一个图形的体积或者质量由以下公式表示：
+$$
+\lim_{\lambda \to 0}{\sum_{i = 1}^{n} {f(\xi_{i}, \eta_{i})}{\Delta\sigma_{i}}}
+$$
+如果当各小闭区域 $\Delta{\sigma_{i}}$ 的直径最大值 $\lambda \to 0$ 时，这个和的极限永远存在，且闭区间 $D$ 的分法以及点 $(\xi_{i}, \eta_{i})$ 的取法无关，则称这个极限为 $f(x, y)$ 在区域 $D$ 上的`二重积分`, 记作：
+$$
+\iint_{D}{f(x, y)}{d{\sigma}}
+$$
+
+### 二.性质：
+
+#### 性质1.
+
+$\alpha$ 和 $\beta$ 是常数.
+$$
+\iint_{D}{[\alpha{f(x, y)} + \beta{g(x, y)}]{d{\sigma}}} = {\alpha}{\iint_{D}{f(x, y)}{d{\sigma}}} + {\beta}{\iint_{D}{g(x, y)}{d{\sigma}}}
+$$
+
+#### 性质2.
+
+二重积分等于在各个部分上的二重积分和.
+$$
+\iint_{D}{f(x, y)}{d{\sigma}} = \iint_{D_1}{f(x, y)}{d{\sigma}} + \iint_{D_2}{f(x, y)}{d{\sigma}}
+$$
+
+#### 性质3.
+
+在区域 $D$ 上，$f(x, y)$ 恒等于 $1$ ，$\sigma$ 是面积.
+$$
+\sigma = \iint_{D}{1}{\cdot}{d{\sigma}}
+$$
+几何意义：高等于 $1$ 的平顶柱体体积等于其底面积.
+
+#### 性质4.
+
+在区域 $D$ 上，有 $f(x, y) \leq g(x, y)$ ，有：
+$$
+\iint_{D}{f(x, y)}{d{\sigma}} {\leq} \iint_{D}{g(x, y)}{d{\sigma}}
+$$
+特殊的，如满足：
+$$
+-\left|f(x, y) \right| \leq {f(x, y)} \leq \left|{f(x, y)}\right|
+$$
+则有：
+$$
+\left| \iint_{D}{f(x, y)}{d{\sigma}} \right| \leq \iint_{D}{\left|{f(x, y)}\right|}{d{\sigma}}
+$$
+
+#### 性质5.
+
+设 $M$ 和 $m$ 是区域 $D$ 上的最大值和最小值，有:
+$$
+{\iint_{D}}{m}{d{\sigma}} \leq {\iint_{D}{f(x, y)}{d{\sigma}}} \leq {\iint_{D}}{M}{d{\sigma}}
+$$
+
+#### 性质6.(二重积分中值定理)
+
+设函数 $f(x, y)$ 在闭区间 $D$ 上连续，则区域 $D$ 一定存在一点 $(\xi_{i}, \eta_{i})$ 使得：
+$$
+\iint_{D}{f(x, y)}{d{\sigma}} = {f({\xi_{i}, \eta_{i}})}{\sigma}
+$$
+
+
+## 7.2 二重积分计算方法
+
+### 一. 直角坐标计算：
+
+
+
+### 二. 极坐标计算：
+
 ## 例题答案
 
 ### 1.1 函数
