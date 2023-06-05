@@ -995,11 +995,127 @@ $$
 
 ## 7.2 二重积分计算方法
 
-### 一. 直角坐标计算：
+### 一.直角坐标计算：
+
+积分区域 $D$ 可以用不等式表示为：
+$$
+\varphi_{1}(x) \leq y \leq \varphi_{2}(x), a \leq x \leq b
+$$
+
+
+![duochongjifen](https://s2.loli.net/2023/06/01/O61MQtHVFSJia2g.png)
+
+面积表示为：
+$$
+S = {\int_{a}^{b}}{dx}{\int_{\varphi_{2}(x)}^{\varphi_{1}(x)}}{f(x, y)}{dy}
+$$
+以上面的例子，计算时先计算 $dy$ 部分的积分，即：$F(\varphi_{1}(x), y) - F(\varphi_{2}(x), y)$, 得到
+
+### 二.极坐标计算：
+
+先将直角坐标系转化为极坐标系：
+$$
+\begin{cases}
+x = \rho \cos\theta \\
+y = \rho \sin\theta
+\end{cases}
+$$
+极坐标计算原理仿照直角坐标系下面积元素取法，在 $(\rho, \theta)$ 处取一个圆心角 $d\theta$ ，宽度为 $d\rho$ 的小扇环作为面积元素，为了方便计算，把这个小扇环面积近似地看成是矩形的面积，面积元素为 $d\rho = \rho d\rho d\theta$.
+
+![jizuobiao_erchongjifen](https://s2.loli.net/2023/06/04/1fGO6QKuv8RLVaM.jpg)
+
+所以对于整个图形的面积，我们只需要把所有的小扇环的面积都遍历一遍，并且与被积函数 $f$ 相乘求和即可:
+$$
+\int_{\rho_1}^{\rho_2}\int_{\theta_1}^{\theta_2}{\rho}{f({\rho\cos\theta}, {\rho\sin\theta})}{d\theta}{d\rho}
+$$
+
+### 三.例题：
+
+## 7.3 三重积分
+
+## 8.1 曲线积分
+
+### 一. 第一类曲线积分（弧长曲线积分）
+
+设曲线 $L$ 是平行于平面 $XOY$ ，我们将曲线 $L$ 分割成 $n$ 份（$M_1, M_2 ... M_i$），设 $\Delta{s_i}$ 为 $\overset{\LARGE{\frown}}{{M_{i-1}}{M_i}}$ 的长度，则面积 $S$ 可以表示为:
+$$
+S = \sum_{i}^{n}{h({\xi_i}, {\eta_i}) \Delta{s_i}}
+$$
+曲线 $L$ 与其投影所形成图形的面积为曲线积分，表示为：
+$$
+S = \int_{L}{f(x, y)}{ds}
+$$
+
+
+![quxian_jifen](https://s2.loli.net/2023/06/05/gLN9qDMyTuRKxnS.png)
 
 
 
-### 二. 极坐标计算：
+曲线积分与定积分的关系：两者不等价，对于曲线积分，其微分 $ds$ 的取值分为恒大于等于 $0$ ，对于定积分，其微分 $dx$ 取值范围为 ${(dx| dx \to 0, x \in R)}$, 即有正负.
+
+
+
+对于闭合曲线 $L$ ，有表示方法：
+$$
+S = \oint_{L}{f(x, y)}{ds}
+$$
+
+
+## 8.2 曲线积分计算
+
+​	设 $\begin{cases} x = x(t) \\ y = y(t)\end{cases}$, 设 $\Delta{S_i}$ 为 $t_i - t_{i -1}$
+
+![quxian](https://s2.loli.net/2023/06/05/WNM43EcL5qulgXT.png)
+
+可以得 $\Delta{S_i}$ 可以表示为：
+$$
+\Delta{S_i} = \int_{t_{i-1}}^{t_i}{\sqrt{{{x^{'}}^2}(t) + {{y^{'}}^2}(t)}}{dt}
+$$
+所以整体的图形的面积可以表示为:
+$$
+S = \sum_{i}^{n}{f(\xi_i, \eta_i)\Delta{S_i}} = \int_{a}^{b}{f[x(t), y(t)]}{\sqrt{{{x^{'}}^2}(t) + {{y^{'}}^2}(t)}}{dt}
+$$
+${{x^{'}}^{2}(t)}$ 表示的是 $x(t)$ 的对 $t$ 的求导的平方， ${{y^{'}}^{2}(t)}$ 同理。
+
+
+
+## 8.3 曲面积分
+
+### 一.曲面面积:
+
+对于坐标轴内的任意一个曲面 $z$, 有其显式的方程 $z = z(x, y)$
+
+![kongjianqumian_random](https://s2.loli.net/2023/06/05/PcU8qTrxa6AblYM.png)
+
+​								    [上图以 $z = -x^2 - y^2 + 5$ 为例]
+
+该方程在 $XOY$ 平面上的投影为：
+
+![kongjianqumian_random_1](https://s2.loli.net/2023/06/05/2gd3hI1Rn6Vckrz.png)
+
+
+
+投影区域亦可表示为 $D(x, y)$，并且 $x, y \in D(x, y)$ ，函数 $z(x, y)$ 在 $D(x, y)$ 上有连续偏导，所以我们可以设曲面在点 $(x,y,z(x, y))$ 处有法向量 $\vec{n} = (z_{x}(x, y), z_{y}(x, y), -1)$, 由结论 [空间曲面中平行四边形的面积](#jump4) 得平行四边形面积为：
+$$
+{1 \over {|\cos \gamma|}}{dx}{dy}
+$$
+而由
+$$
+\vec{n} \cdot 1 = |\vec{n}| \cdot 1 \cdot \cos{\gamma}
+$$
+得：
+$$
+\cos {\gamma} = {-1 \over {\sqrt{1 + {z_{x}}^2(x, y) + {{z_{y}}^2(x, y) }}}}
+$$
+所以曲面积元素为：
+$$
+S = \iint_{D_{xy}}{\sqrt{1 + {z_{x}}^2(x, y) + {z_{y}}^2(x, y)}}{dx}{dy}
+$$
+转换为极坐标采用二重积分直角坐标转化为极坐标的方法。
+
+### 二.第一曲面积分:
+
+
 
 ## 例题答案
 
@@ -1401,6 +1517,8 @@ $$
 
 
 
+<span id='jump3'></span>
+
 ### 空间向量积基本公式证明
 
 设空间内任意非零向量 $\vec{a}$ 和 $\vec{b}$ 
@@ -1426,4 +1544,8 @@ $$
 $$
 \vec{a} \times \vec{b} = (a_yb_z - a_zb_y)\vec{i} + (a_zb_x - a_xb_z)\vec{j} + (a_xb_y - a_yb_x)\vec{k}
 $$
+
+<span id='jump4'></span>
+
+### 空间曲面中平行四边形的面积
 
